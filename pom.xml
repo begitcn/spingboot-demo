@@ -10,9 +10,16 @@
     <version>1.0-SNAPSHOT</version>
 
     <modules>
-        <module>es</module>
-        <module>promotion</module>
+        <module>elasticsearch</module>
+        <module>h2</module>
+        <module>jpa</module>
+        <module>mybatis</module>
+        <module>mysql</module>
+        <module>rabbitmq</module>
+        <module>reactive-redis</module>
+        <module>reactive-redis</module>
         <module>web</module>
+        <module>websocket</module>
     </modules>
 
     <properties>
@@ -34,6 +41,18 @@
             <artifactId>hutool-all</artifactId>
             <version>5.4.3</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.junit.vintage</groupId>
+                    <artifactId>junit-vintage-engine</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
     </dependencies>
 
     <dependencyManagement>
@@ -47,35 +66,4 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                    <encoding>UTF-8</encoding>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>2.3.0.RELEASE</version>
-                <configuration>
-                    <mainClass>com.example.web.WebApplication</mainClass>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>repackage</id>
-                        <goals>
-                            <goal>repackage</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
 </project>
