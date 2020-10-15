@@ -6,6 +6,7 @@
 > 简单粗暴 集成示例  不定期更新完善
 
 - [x] web
+- [ ] excel相关
 - [ ] elasticsearch
 - [ ] h2
 - [ ] jpa

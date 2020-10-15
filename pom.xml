@@ -20,6 +20,7 @@
         <module>redis</module>
         <module>web</module>
         <module>websocket</module>
+        <module>excel</module>
     </modules>
 
     <properties>
